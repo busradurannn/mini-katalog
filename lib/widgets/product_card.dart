@@ -32,9 +32,14 @@ class ProductCard extends StatelessWidget {
                   product.image,
                   width: double.infinity,
                   fit: BoxFit.cover,
+                  headers: const {
+                    'Access-Control-Allow-Origin': '*',
+                  },
                   errorBuilder: (context, error, stackTrace) => Container(
                     color: Colors.grey.shade200,
-                    child: const Icon(Icons.image_not_supported, size: 40),
+                    child: const Center(
+                      child: Icon(Icons.phone_android, size: 60, color: Colors.deepPurple),
+                    ),
                   ),
                 ),
               ),

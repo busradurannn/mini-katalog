@@ -18,11 +18,11 @@ class Product {
   factory Product.fromJson(Map<String, dynamic> json) {
     return Product(
       id: json['id'] ?? 0,
-      title: json['title'] ?? '',
+      title: json['name'] ?? '',
       description: json['description'] ?? '',
       price: json['price']?.toString() ?? '0',
       image: json['image'] ?? '',
-      category: json['category'] ?? '',
+      category: json['tagline'] ?? '',
     );
   }
 }
